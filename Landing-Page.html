@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZATCA API — فوترة إلكترونية متوافقة</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0e27; color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: #00d4ff; }
+        .hero { text-align: center; padding: 80px 0; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; color: #8892b0; margin-bottom: 40px; }
+        .badge { display: inline-block; background: #00d4ff; color: #0a0e27; 
+                  padding: 8px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px; }
+        .cta { display: inline-block; background: #00d4ff; color: #0a0e27; 
+               padding: 15px 40px; border-radius: 8px; text-decoration: none; 
+               font-size: 18px; font-weight: bold; margin: 10px; }
+        .cta-outline { background: transparent; border: 2px solid #00d4ff; color: #00d4ff; }
+        .features { padding: 60px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .feature { background: #112240; padding: 30px; border-radius: 12px; }
+        .feature h3 { color: #00d4ff; margin-bottom: 15px; font-size: 20px; }
+        .feature p { color: #8892b0; line-height: 1.6; }
+        .pricing { padding: 60px 0; text-align: center; }
+        .pricing h2 { font-size: 36px; margin-bottom: 40px; }
+        .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .plan { background: #112240; padding: 40px; border-radius: 12px; border: 1px solid #233554; }
+        .plan.popular { border-color: #00d4ff; transform: scale(1.05); }
+        .plan h3 { font-size: 24px; margin-bottom: 10px; }
+        .plan .price { font-size: 48px; color: #00d4ff; margin: 20px 0; }
+        .plan .price span { font-size: 16px; color: #8892b0; }
+        .plan ul { list-style: none; text-align: right; margin: 20px 0; }
+        .plan ul li { padding: 10px 0; border-bottom: 1px solid #233554; color: #8892b0; }
+        .plan ul li::before { content: "✓ "; color: #00d4ff; }
+        footer { text-align: center; padding: 40px 0; color: #8892b0; border-top: 1px solid #233554; margin-top: 40px; }
+        @media (max-width: 768px) { 
+            .features, .plans { grid-template-columns: 1fr; } 
+            .plan.popular { transform: none; }
+            .hero h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="logo">⚡ ZATCA API</div>
+        <nav>
+            <a href="#features" style="color: #8892b0; text-decoration: none; margin: 0 15px;">المميزات</a>
+            <a href="#pricing" style="color: #8892b0; text-decoration: none; margin: 0 15px;">الأسعار</a>
+            <a href="#contact" style="color: #00d4ff; text-decoration: none; margin: 0 15px;">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="badge">✅ معتمد من هيئة الزكاة والضريبة</div>
+            <h1>فوترة إلكترونية متوافقة<br>مع ZATCA Phase 2</h1>
+            <p>API جاهز يندمج مع أي نظام محاسبة — بدون تعقيد</p>
+            <a href="#pricing" class="cta">ابدأ مجاناً</a>
+            <a href="#docs" class="cta cta-outline">التوثيق</a>
+        </div>
+    </section>
+
+    <section class="features container" id="features">
+        <div class="feature">
+            <h3>🔐 توقيع إلكتروني</h3>
+            <p>توقيع XAdES-BES مع شهادة ZATCA. الفاتورة موقعة رقمياً وجاهزة للإرسال</p>
+        </div>
+        <div class="feature">
+            <h3>📱 QR Code ذكي</h3>
+            <p>QR code متوافق مع معايير ZATCA TLV. العميل يمسح ويشوف تفاصيل الفاتورة</p>
+        </div>
+        <div class="feature">
+            <h3>⚡ API سريع</h3>
+            <p>استجابة أقل من 200ms. يندمج مع أي نظام عبر REST API بسيط</p>
+        </div>
+        <div class="feature">
+            <h3>📊 تقارير فورية</h3>
+            <p>تابع حالة الفواتير المُرسلة والمقبولة والمرفوضة من ZATCA</p>
+        </div>
+        <div class="feature">
+            <h3>🔄 Sandbox + Production</h3>
+            <p>اختبر في بيئة Sandbox قبل الإنتاج. تبديل بسيط عبر إعداد واحد</p>
+        </div>
+        <div class="feature">
+            <h3>🛡️ أمان بنكي</h3>
+            <p>تشفير ECDSA P-256 + SHA-256. معايير أمان عالمية المستوى</p>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>اختر الباقة المناسبة</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Starter</h3>
+                    <div class="price">499 <span>ريال/شهر</span></div>
+                    <ul>
+                        <li>100 فاتورة/شهر</li>
+                        <li>QR Code + XML</li>
+                        <li>دعم Sandbox</li>
+                        <li>تقارير أساسية</li>
+                        <li>دعم بالبريد</li>
+                    </ul>
+                    <a href="#contact" class="cta" style="width: 100%; text-align: center;">اشترك</a>
+                </div>
+                <div class="plan popular">
+                    <h3>Pro 🔥</h3>
+                    <div class="price">1,499 <span>ريال/شهر</span></div>
+                    <ul>
+                        <li>فواتير غير محدودة</li>
+                        <li>Phase 2 كامل (Clearance)</li>
+                        <li>API Key متعدد</li>
+                        <li>Webhook notifications</li>
+                        <li>دعم فني مباشر</li>
+                    </ul>
+                    <a href="#contact" class="cta" style="width: 100%; text-align: center;">الأكثر طلباً</a>
+                </div>
+                <div class="plan">
+                    <h3>Enterprise</h3>
+                    <div class="price">3,999 <span>ريال/شهر</span></div>
+                    <ul>
+                        <li>كل مميزات Pro</li>
+                        <li>Private server</li>
+                        <li>تخصيص كامل</li>
+                        <li>SLA 99.9%</li>
+                        <li>مدير حساب مخصص</li>
+                    </ul>
+                    <a href="#contact" class="cta cta-outline" style="width: 100%; text-align: center;">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 60px 0; text-align: center;" id="contact">
+        <h2 style="font-size: 36px; margin-bottom: 20px;">جاهز تبدأ؟</h2>
+        <p style="color: #8892b0; font-size: 18px; margin-bottom: 30px;">
+            سجّل بريدك ونرسل لك API Key تجريبي فوراً
+        </p>
+        <form style="max-width: 500px; margin: 0 auto;">
+            <input type="email" placeholder="بريدك الإلكتروني" 
+                   style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #233554; 
+                          background: #112240; color: #fff; margin-bottom: 15px; font-size: 16px;">
+            <button type="submit" class="cta" style="width: 100%; border: none; cursor: pointer;">
+                احصل على API Key مجاناً
+            </button>
+        </form>
+        <p style="color: #8892b0; margin-top: 20px; font-size: 14px;">
+            أو تواصل مباشرة: <a href="mailto:hello@zatcaapi.com" style="color: #00d4ff;">hello@zatcaapi.com</a>
+        </p>
+    </section>
+
+    <footer class="container">
+        <p>© 2026 ZATCA API — جميع الحقوق محفوظة</p>
+        <p style="margin-top: 10px;">متوافق مع معايير هيئة الزكاة والضريبة السعودية</p>
+    </footer>
+</body>
+</html>
